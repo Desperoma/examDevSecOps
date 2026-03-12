@@ -1,0 +1,48 @@
+# .dockerignore — Exclure les fichiers inutiles de l'image Docker
+# Réduit la taille du contexte de build et évite d'inclure des secrets
+
+# Environnements Python virtuels
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Tests (ne pas inclure dans l'image de production)
+test_*.py
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+Jenkinsfile
+
+# Documentation
+*.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Variables d'environnement (JAMAIS dans l'image !)
+.env
+.env.*
+*.env
+
+# Docker
+docker-compose*.yml
+Dockerfile*
+
+# Logs
+*.log
+logs/
