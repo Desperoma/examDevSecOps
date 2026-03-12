@@ -110,6 +110,5 @@ def test_delete_task(client):
 def test_homepage(client):
     """Test que la page d'accueil se charge"""
     response = client.get('/')
-    #assert response.status_code == 200
-    assert 1 == 2
+    assert response.status_code == 200
     assert b'TaskFlow' in response.data
